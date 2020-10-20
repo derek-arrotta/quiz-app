@@ -5,24 +5,54 @@ const store = {
   // 5 or more questions are required
   questions: [
     {
-      question: 'What color is broccoli?',
+      question: 'What is the name of Jess`s roommates?',
       answers: [
-        'red',
-        'orange',
-        'pink',
-        'green'
+        'Winfrey, Dean, and Nick',
+        'Winston, Schmidt, and Nick',
+        'Winston, Craig, and Colin',
+        'Willy, Sanders, and Nick'
       ],
-      correctAnswer: 'green'
+      correctAnswer: 'Winston, Schmidt, and Nick'
     },
     {
-      question: 'What is the current year?',
+      question: 'What is the name of the main character in Nick`s novel that he writes?',
       answers: [
-        '1970',
-        '2015',
-        '2019',
-        '2005'
+        'Detective Jimmy Pepperstein',
+        'Detective Jolly Dogood',
+        'Detective Randy Brandsborn',
+        'Detective Julius Pepperwood'
       ],
-      correctAnswer: '2019'
+      correctAnswer: 'Detective Julius Pepperwood'
+    },
+    {
+      question: 'What is the name of the drinking game that the roommates invented?',
+      answers: [
+        'Good American',
+        'Thirteen Colonies',
+        'God Bless America',
+        'True American'
+      ],
+      correctAnswer: 'True American'
+    },
+    {
+      question: 'What is the name of Winston`s cat?',
+      answers: [
+        'Ferguson',
+        'Prince Phillip',
+        'Fernando',
+        'Fabian'
+      ],
+      correctAnswer: 'Ferguson'
+    },
+    {
+      question: 'How did Schmidt and Nick first meet?',
+      answers: [
+        'On the playground in elementary school',
+        'They were roommates in college',
+        'Schmidt saved him from a bee sting in middle school',
+        'They were in a band together in high school'
+      ],
+      correctAnswer: 'They were roommates in college'
     }
   ],
   quizStarted: false,
