@@ -12,12 +12,207 @@
 </head>
 
 <body>
+
   <header>
-    <h1>The name of your quiz</h1>
+    <h1>New Girl Trivia</h1>
   </header>
-  <main></main>
+
+  <main aria-live="polite">
+    
+    <!-- start screen -->
+    <div class="start-screen">
+      <img src="images/new-girl.jpg" alt="new girl cast" width="500">
+      <p>Test your knowledge of the cult classic TV show "New Girl"!</p>
+      <button type="button" id="start">Start Quiz</button>
+    </div>
+    
+
+
+    <!-- question 1 -->
+    <!-- question header delete next button, add to response screen (add to bottom of list),-->
+    <ul class="question-and-score">
+      <li id="question-number">Question Number: 1/5</li>
+      <li id="score">Score 0/5</li>
+    </ul>
+    <form id="question-form" class="question-form">
+      <fieldset>
+        <div class="question">
+          <legend>What is the name of Jess`s roommates?</legend>
+        </div>
+        <div class="options">
+          <div class="answers">
+            <div id="option-container-0">
+              <input type="radio" name="options" id="option1" value="Winfrey, Dean, and Nick" tabindex="1" required>
+              
+              <label for="option1">Winfrey, Dean, and Nick</label>
+            </div>
+            <div id="option-container-1">
+              <input type="radio" name="options" id="option2" value="Winston, Schmidt, and Nick" tabindex="2" required>
+              <input required>
+              <label for="option1">Winston, Schmidt, and Nick</label>
+            </div>
+            <div id="option-container-2">
+              <input type="radio" name="options" id="option3" value="Winston, Craig, and Colin" tabindex="3" required>
+              <input required>
+              <label for="option1">Winston, Craig, and Colin</label>
+            </div>
+            <div id="option-container-3">
+              <input type="radio" name="options" id="option4" value="Willy, Sanders, and Nick" tabindex="4" required>
+              <input required>
+              <label for="option1">Willy, Sanders, and Nick</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" id="submit-answer-btn" tabindex="5">Submit</button>
+        <button type="button" id="next-question-btn" tabindex="6"> Next >></button>
+      </fieldset>
+    </form>
+
+    <!-- question 2 -->
+    <form id="question-form" class="question-form">
+      <fieldset>
+        <div class="question">
+          <legend>What is the name of the main character in Nick`s novel that he writes?</legend>
+        </div>
+        <div class="options">
+          <div class="answers">
+            <div id="option-container-0">
+              <input type="radio" name="options" id="option1" value="Detective Jimmy Pepperstein" tabindex="1" required>
+              <input required>
+              <label for="option1">Detective Jimmy Pepperstein</label>
+            </div>
+            <div id="option-container-1">
+              <input type="radio" name="options" id="option2" value="Detective Jolly Dogood" tabindex="2" required>
+              <input required>
+              <label for="option1">Detective Jolly Dogood</label>
+            </div>
+            <div id="option-container-2">
+              <input type="radio" name="options" id="option3" value="Detective Randy Brandsborn" tabindex="3" required>
+              <input required>
+              <label for="option1">Detective Randy Brandsborn</label>
+            </div>
+            <div id="option-container-3">
+              <input type="radio" name="options" id="option4" value="Detective Julius Pepperwood" tabindex="4" required>
+              <input required>
+              <label for="option1">Detective Julius Pepperwood</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" id="submit-answer-btn" tabindex="5">Submit</button>
+        <button type="button" id="next-question-btn" tabindex="6"> Next >></button>
+      </fieldset>
+    </form>
+
+    <!-- question 3 -->
+    <form id="question-form" class="question-form">
+      <fieldset>
+        <div class="question">
+          <legend>What is the name of the drinking game that the roommates invented?</legend>
+        </div>
+        <div class="options">
+          <div class="answers">
+            <div id="option-container-0">
+              <input type="radio" name="options" id="option1" value="Good American" tabindex="1" required>
+              <input required>
+              <label for="option1">Good American</label>
+            </div>
+            <div id="option-container-1">
+              <input type="radio" name="options" id="option2" value="Thirteen Colonies" tabindex="2" required>
+              <input required>
+              <label for="option1">Thirteen Colonies</label>
+            </div>
+            <div id="option-container-2">
+              <input type="radio" name="options" id="option3" value="God Bless America" tabindex="3" required>
+              <input required>
+              <label for="option1">God Bless America</label>
+            </div>
+            <div id="option-container-3">
+              <input type="radio" name="options" id="option4" value="True American" tabindex="4" required>
+              <input required>
+              <label for="option1">True American</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" id="submit-answer-btn" tabindex="5">Submit</button>
+        <button type="button" id="next-question-btn" tabindex="6"> Next >></button>
+      </fieldset>
+    </form>
+
+    <!-- question 4 -->
+    <form id="question-form" class="question-form">
+      <fieldset>
+        <div class="question">
+          <legend>What is the name of Winston`s cat?</legend>
+        </div>
+        <div class="options">
+          <div class="answers">
+            <div id="option-container-0">
+              <input type="radio" name="options" id="option1" value="Ferguson" tabindex="1" required>
+              <input required>
+              <label for="option1">Ferguson</label>
+            </div>
+            <div id="option-container-1">
+              <input type="radio" name="options" id="option2" value="Prince Phillip" tabindex="2" required>
+              <input required>
+              <label for="option1">Prince Phillip</label>
+            </div>
+            <div id="option-container-2">
+              <input type="radio" name="options" id="option3" value="Fernando" tabindex="3" required>
+              <input required>
+              <label for="option1">Fernando</label>
+            </div>
+            <div id="option-container-3">
+              <input type="radio" name="options" id="option4" value="Fabian" tabindex="4" required>
+              <input required>
+              <label for="option1">Fabian</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" id="submit-answer-btn" tabindex="5">Submit</button>
+        <button type="button" id="next-question-btn" tabindex="6"> Next >></button>
+      </fieldset>
+    </form>
+
+    <!-- question 5 -->
+    <form id="question-form" class="question-form">
+      <fieldset>
+        <div class="question">
+          <legend>How did Schmidt and Nick first meet?</legend>
+        </div>
+        <div class="options">
+          <div class="answers">
+            <div id="option-container-0">
+              <input type="radio" name="options" id="option1" value="On the playground in elementary school" tabindex="1" required>
+              <input required>
+              <label for="option1">On the playground in elementary school</label>
+            </div>
+            <div id="option-container-1">
+              <input type="radio" name="options" id="option2" value="They were roommates in college" tabindex="2" required>
+              <input required>
+              <label for="option1">They were roommates in college</label>
+            </div>
+            <div id="option-container-2">
+              <input type="radio" name="options" id="option3" value="Schmidt saved him from a bee sting in middle school" tabindex="3" required>
+              <input required>
+              <label for="option1">Schmidt saved him from a bee sting in middle school</label>
+            </div>
+            <div id="option-container-3">
+              <input type="radio" name="options" id="option4" value="They were in a band together in high school" tabindex="4" required>
+              <input required>
+              <label for="option1">They were in a band together in high school</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" id="submit-answer-btn" tabindex="5">Submit</button>
+        <button type="button" id="next-question-btn" tabindex="6"> Next >></button>
+      </fieldset>
+    </form>
+
+  </main>
+
   <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
   <script src="app.js"></script>
+
 </body>
 
 </html>
