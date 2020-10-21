@@ -88,10 +88,10 @@ const picStore = [image0, image1, image2, image3, image4, image5];
   
   // display basic html templates
 
-  
   function displayStartScreen() {
     return `
       <div class="start-screen">
+        <img src="images/0.jpg" alt="new girl cast" width="650">
         <p>Test your knowledge of the cult classic TV show "New Girl" !</p>
         <button type="button" id="start">Start Quiz</button>
       </div>
@@ -133,6 +133,7 @@ const picStore = [image0, image1, image2, image3, image4, image5];
   function displayQuestion() {
     let questionNumber = STORE.questions[STORE.questionNumber];
     return `
+      <img src=${picStore[STORE.questionNumber + 1]} alt="new girl" width="375">
       <form id="question-form" class="question-form">
         <fieldset>
           <div class="question">
