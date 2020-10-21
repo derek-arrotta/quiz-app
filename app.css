@@ -23,13 +23,13 @@ header {
   color: rgb(0, 0, 0);
 }
 
-h1 {
+h1, p {
   text-align: center;
 }
 
 .question-and-score {
   font-size: 20px;
-  /*font-weight: 600px;*/
+  font-weight: 600px;
   color:rgb(0, 0, 0);
   text-align: center;
   list-style: none;
@@ -67,7 +67,7 @@ legend {
   margin-bottom: 20px;
   padding: 0 2%;
   font-size: 20px;
-  /*font-weight: 600px;*/
+  font-weight: 600px;
 }
 
 .options ul {
@@ -106,9 +106,9 @@ label {
 button:hover:enabled,
 button:focus:enabled{
   background-color: #ff8d00;
-  /*-webkit-transition: background 0.1s;
+  -webkit-transition: background 0.1s;
   -moz-transition: background 0.1s;
-  -o-transition: background 0.1s;*/
+  -o-transition: background 0.1s;
   transition: background 0.1s;
 }
 
