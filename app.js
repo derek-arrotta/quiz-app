@@ -60,6 +60,13 @@ const STORE = {
   score: 0
 };
 
+let image0 = "images/0.jpg";
+let image1 = "images/1.gif";
+let image2 = "images/2.gif";
+let image3 = "images/3.gif";
+let image4 = "images/4.gif";
+let image5 = "images/5.gif";
+const picStore = [image0, image1, image2, image3, image4, image5];
 /**
  * 
  * Technical requirements:
@@ -80,10 +87,11 @@ const STORE = {
 // These functions return HTML templates
   
   // display basic html templates
+
+  
   function displayStartScreen() {
     return `
       <div class="start-screen">
-        <img src="images/new-girl.jpg" alt="new girl cast" width="500" id="start-screen-pic">
         <p>Test your knowledge of the cult classic TV show "New Girl" !</p>
         <button type="button" id="start">Start Quiz</button>
       </div>
