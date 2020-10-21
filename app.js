@@ -81,45 +81,41 @@ const STORE = {
   
   // display basic html templates
   function displayStartScreen() {
-    return
-      `
+    return `
       <div class="start-screen">
         <img src="images/new-girl.jpg" alt="new girl cast" width="500" id="start-screen-pic">
-        <p>Test your knowledge of the cult classic TV show "New Girl"!</p>
+        <p>Test your knowledge of the cult classic TV show "New Girl" !</p>
         <button type="button" id="start">Start Quiz</button>
       </div>
-      `
-      ;
+      `;
   }
+
   function displayQuestNumAndScore() {
-    return
-      `
+    return `
       <ul class="question-and-score">
         <li id="question-number">
-          Question Number: ${STORE.currentQuestion + 1}/${STORE.questions.length}
+          Question Number: ${STORE.questionNumber + 1}/${STORE.questions.length}
         </li>
         <li id="score">
           Score: ${STORE.score}/${STORE.questions.length}
         </li>
       </ul>
-      `
-      ;
+      `;
   }
 
   // display possible answers from STORE array
   function displayAnswers() {
-    const answersArray = STORE.questions[STORE.currentQuestion].answers;
+    const answersArray = STORE.questions[STORE.questionNumber].answers
     let answersHtml = '';
     let i=0;
+
     answersArray.forEach (answer => {
-      answersHtml +=
-        `
-        <div id="option-container-0">
+      answersHtml += `
+        <div id="option-container-${i}">
           <input type="radio" name="options" id="option${i+1}" value="${answer}" tabindex="${i+1}" required>
           <label for="option${i+1}"> ${answer}</label>
         </div>
-        `
-        ;
+        `;
         i++;
     });
     return answersHtml;
@@ -127,13 +123,12 @@ const STORE = {
 
   // display question from STORE array
   function displayQuestion() {
-    let currentQuestion = STORE.questions[STORE.currentQuestion];
-    return
-      `
+    let questionNumber = STORE.questions[STORE.questionNumber];
+    return `
       <form id="question-form" class="question-form">
         <fieldset>
           <div class="question">
-            <legend> ${currentQuestion.question}</legend>
+            <legend> ${questionNumber.question}</legend>
           </div>
           <div class="options">
             <div class="answers">
@@ -144,14 +139,12 @@ const STORE = {
           <button type="button" id="next-question-btn" tabindex="6">Next</button>
         </fieldset>
       </form>
-      `
-      ;
+      `;
   }
 
   // display results screen
   function displayResults() {
-    return
-    `
+    return `
     <div class="results">
       <form id="js-restart-quiz">
         <fieldset>
@@ -160,6 +153,7 @@ const STORE = {
               <legend>Your Score is: ${STORE.score}/${STORE.questions.length}</legend>
             </div>
           </div>
+
           <div class="row">
             <div class="col-12">
               <button type="button" id="restart"> Restart Quiz </button>
@@ -168,27 +162,22 @@ const STORE = {
         </fieldset>
       </form>
     </div>
-    `
-    ;
+    `;
   } 
 
   // display correct or incorrect box
   function displayRightOrWrong(answerStatus) {
-    let correctAnswer = STORE.questions[STORE.currentQuestion].correctAnswer;
+    let correctAnswer = STORE.questions[STORE.questionNumber].correctAnswer;
     let html = '';
     if (answerStatus === 'correct') {
-      html =
-      `
+      html = `
       <div class="right-answer">That is correct!</div>
-      `
-      ; 
+      `; 
     }
     else if (answerStatus === 'incorrect') {
-      html =
-      `
+      html = `
       <div class="wrong-answer">That is incorrect :(...The correct answer is ${correctAnswer}.</div>
-      `
-      ;
+      `;
     }
     return html;
   }
@@ -207,7 +196,7 @@ const STORE = {
       $('main').html(displayStartScreen());
       return;
     }
-    else if (STORE.currentQuestion >= 0 && STORE.currentQuestion < STORE.questions.length) {
+    else if (STORE.questionNumber >= 0 && STORE.questionNumber < STORE.questions.length) {
       html = displayQuestNumAndScore();
       html += displayQuestion();
       $('main').html(html);
@@ -241,11 +230,11 @@ const STORE = {
   function clickSubmit() {
     $('body').on('submit', '#question-form', function (event) {
       event.preventDefault();
-      const currentQuestion = STORE.questions[STORE.currentQuestion];
+      const questionNumber = STORE.questions[STORE.questionNumber];
       let selectedOption = $('input[name=options]:checked').val();
-      let optionContainerId = `#option-container-${currentQuestion.answers.findIndex(i => i === selectedOption)}`;
+      let optionContainerId = `#option-container-${questionNumber.answers.findIndex(i => i === selectedOption)}`;
 
-      if (selectedOption === currentQuestion.correctAnswer) {
+      if (selectedOption === questionNumber.correctAnswer) {
         STORE.score++;
         $(optionContainerId).append(displayRightOrWrong('correct'));
       }
@@ -254,10 +243,10 @@ const STORE = {
         $(optionContainerId).append(displayRightOrWrong('incorrect'));
       }
       
-      STORE.currentQuestion++;
+      STORE.questionNumber++;
       $('#submit-answer-btn').hide();
       $('input[type=radio]').each(() => {
-        $('input[radio]').attr('disabled', true);
+        $('input[type=radio]').attr('disabled', true);
       });
       $('#next-question-btn').show();
 
@@ -266,7 +255,7 @@ const STORE = {
 
   function restartQuiz() {
     STORE.quizStarted = false;
-    STORE.currentQuestion = 0;
+    STORE.questionNumber = 0;
     STORE.score = 0;
   }
 
