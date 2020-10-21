@@ -15,7 +15,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: black;
   margin: 0;
-  background: cover;
+  /*background: cover;*/
   /*background-image: url("../images/wallpaper.jpg");*/
   background-color: #262626;
 }
@@ -31,7 +31,7 @@ h1 {
 
 .question-and-score {
   font-size: 20px;
-  font-weight: 600px;
+  /*font-weight: 600px;*/
   color:white;
   text-align: center;
   list-style: none;
@@ -69,7 +69,7 @@ legend {
   margin-bottom: 20px;
   padding: 0 2%;
   font-size: 20px;
-  font-weight: 600px;
+  /*font-weight: 600px;*/
 }
 
 .options ul {
@@ -108,9 +108,9 @@ label {
 button:hover:enabled,
 button:focus:enabled{
   background-color: #ff8d00;
-  -webkit-transition: background 0.1s;
+  /*-webkit-transition: background 0.1s;
   -moz-transition: background 0.1s;
-  -o-transition: background 0.1s;
+  -o-transition: background 0.1s;*/
   transition: background 0.1s;
 }
 
