@@ -15,8 +15,14 @@ body {
 }
 
 .right-answer {
-  background: ivory;
+  background: #b8e6c7;
   padding: 10px 20px;
   margin: 5px 20px;
   border: 2px solid #21c500;
+}
+.wrong-answer {
+  background: #e0a9a9;
+  padding: 10px;
+  margin: 5px 20px;
+  border: 2px solid #c50000;
 }
