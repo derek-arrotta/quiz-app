@@ -15,7 +15,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: black;
   margin: 0;
-  background-color: #ffffff;
+  background-color: #3bb1e7;
 }
 
 header {
@@ -69,17 +69,23 @@ button {
 }
 
 .start-screen, fieldset {
-  width:85%;
-  /*padding: 40px;*/
+  width:92%;
+  padding: 20px;
   margin: 10px auto 0 auto;
-  background:rgba(255, 255, 255, 0.8);
+  background:rgba(255, 255, 255, 0.39);
   border-radius: 10px;
 }
 
 @media all and (min-width: 800px) {
+  
   fieldset {
     max-width: 50%;
   }
+
+  .start-screen {
+    width: 61%;
+  }
+
 }
 
 .start {
