@@ -133,7 +133,7 @@ const picStore = [image0, image1, image2, image3, image4, image5];
   function displayQuestion() {
     let questionNumber = STORE.questions[STORE.questionNumber];
     return `
-      <img src=${picStore[STORE.questionNumber + 1]} alt="new girl" width="375">
+      <img src=${picStore[STORE.questionNumber + 1]} alt="new girl jess winston schmidt" width="375">
       <form id="question-form" class="question-form">
         <fieldset>
           <div class="question">
