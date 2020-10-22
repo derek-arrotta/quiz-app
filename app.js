@@ -181,7 +181,7 @@ const picStore = [image0, image1, image2, image3, image4, image5];
     if (answerStatus === 'correct') {
       html = `
       <div class="right-answer">That is correct!</div>
-      `; 
+      `;
     }
     else if (answerStatus === 'incorrect') {
       html = `
@@ -258,7 +258,6 @@ const picStore = [image0, image1, image2, image3, image4, image5];
         $('input[type=radio]').attr('disabled', true);
       });
       $('#next-question-btn').show();
-
     });
   }
 
