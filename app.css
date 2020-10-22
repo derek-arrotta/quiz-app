@@ -47,7 +47,7 @@ img {
 
 .question-and-score {
   font-size: 20px;
-  font-weight: 600px;
+  font-weight: 600;
   color:rgb(0, 0, 0);
   text-align: center;
   list-style: none;
@@ -83,7 +83,6 @@ button {
 }
 
 .start {
-  float: center;
   display: block;
   margin: 0 auto;
   max-width: 100%;
@@ -100,7 +99,7 @@ legend {
   margin-bottom: 20px;
   padding: 0 2%;
   font-size: 20px;
-  font-weight: 600px;
+  font-weight: 600;
 }
 
 .options ul {
@@ -110,7 +109,7 @@ legend {
 }
 
 ul {
-  padding-inline-start: 0px;
+  padding-inline-start: 0px; /* doesn't exist for css validator, but is used to overwrite value in "user agent stylesheet" */
   margin-top: 0px;
   margin-bottom: 2px;
 }
