@@ -93,7 +93,7 @@ const picStore = [image0, image1, image2, image3, image4, image5];
       <div class="start-screen">
         <img src="images/0.jpg" alt="new girl cast" width="650">
         <p>Test your knowledge of the cult classic TV show "New Girl" !</p>
-        <button type="button" id="start">Start Quiz</button>
+        <button type="button" id="start" class="start">Start Quiz</button>
       </div>
       `;
   }
@@ -144,8 +144,8 @@ const picStore = [image0, image1, image2, image3, image4, image5];
               ${displayAnswers()}
             </div>
           </div>
-          <button type="submit" id="submit-answer-btn" tabindex="5">Submit</button>
-          <button type="button" id="next-question-btn" tabindex="6">Next</button>
+          <button type="submit" id="submit-answer-btn" tabindex="5" class="start">Submit</button>
+          <button type="button" id="next-question-btn" tabindex="6" class="start">Next</button>
         </fieldset>
       </form>
       `;
