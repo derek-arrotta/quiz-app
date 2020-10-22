@@ -27,6 +27,17 @@ h1, p {
   text-align: center;
 }
 
+p {
+  padding-left: 30px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
 .question-and-score {
   font-size: 20px;
   font-weight: 600px;
@@ -58,6 +69,15 @@ button {
   border-radius: 10px;
 }
 
+.start {
+  float: center;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+}
+
 legend {
   font-weight: 700;
   font-size: 18px;
@@ -74,6 +94,10 @@ legend {
   list-style: none;
   margin:0;
   text-align:left;
+}
+
+ul {
+  padding-inline-start: 0px;
 }
 
 label {
@@ -97,10 +121,6 @@ label {
   padding: 10px;
   margin: 5px 20px;
   border:2px solid #fe0000;
-}
-
-.question-form button {
-  float:right;
 }
 
 button:hover:enabled,
