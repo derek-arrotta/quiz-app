@@ -1,1 +1,1 @@
-### Boilerplate app structure for Quiz App project
+### Quiz project (html, css, javascript)
